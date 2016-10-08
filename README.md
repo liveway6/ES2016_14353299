@@ -292,7 +292,7 @@
 
        运行成功的结果如下：
 
-        ![successful](successful.png)
+        ![successful](successful.png)![successful](successful.png)
 
        
 
