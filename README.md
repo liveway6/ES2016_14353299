@@ -290,11 +290,11 @@
        $  ant -f runexample.xml -Dnumber=1  
      ```
 
-       运行成功的结果如下：
+      运行成功的结果如下：
 
-        ![successful](picture/successful.png)
+     ![successful](picture/successful.png)
 
-       ​DOL环境配置完成
+       DOL环境配置完成
 
 * **Experimental experience**
 
