@@ -1,14 +1,14 @@
 ## 配置DOL的过程	
 
-* **Description**
+* ## Description
 
   **Distributed operation layer (DOL)** is a software development framework to program parallel applications. The DOL allows to specify applications based on the Kahn process network model of computation and features a simulation engine based on SystemC. Moreover, the DOL provides an XML-based specification format to describe the implementation of a parallel application on a multi-processor systems, including binding and mapping.
 
   ​
 
-* **How to install**
+* ## How to install
 
-  1. 安装必要环境：
+1. #### 安装必要环境：
 
      A.  安装之前更新源信息
 
@@ -122,10 +122,12 @@
 
      指令后的执行结果如下：
 
-     ![java_version](picture/java_version.png)	
+     ![java_version](picture/java_version.png)
+
+     ​	
 
 
-2.   下载文件
+2.   #### 下载文件 
 
      A.	下载systemc-2.3.1.tgz
 
@@ -151,7 +153,7 @@
 
      ​
 
-3.   解压文件
+3.   #### 解压文件
 
        A.	新建dol的文件夹 
 
@@ -175,11 +177,9 @@
        $  tar -zxvf systemc-2.3.1.tgz
      ```
 
-       ​
+       ​  ​
 
-       ​
-
-4.   编译systemc
+4.   #### 编译systemc
 
        A.	解压后进入systemc-2.3.1的目录下
 
@@ -242,7 +242,7 @@
 
        ​	
 
-5.   编译dol
+5.   #### 编译dol
 
        A.	进入刚刚dol的文件夹
 
@@ -298,7 +298,7 @@
 
      ​
 
-* **Experimental experience**
+* ## **Experimental experience**
 
   ​	还记得上个学期操作系统重装了四次VMware和Ubuntu过程的煎熬，这个学期换了电脑，听到TA大大说这学期还需要用Ubuntu，我内心是拒绝的。
 
