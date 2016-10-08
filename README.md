@@ -290,13 +290,13 @@
        $  ant -f runexample.xml -Dnumber=1  
      ```
 
-       ![successful](successful.png)
-
-     运行成功的结果如下：
+       运行成功的结果如下：
 
         ![successful](successful.png)
 
        
+
+     ​
 
 * **Experimental experience**
 
