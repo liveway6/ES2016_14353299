@@ -281,7 +281,7 @@
        $  ant -f build_zip.xml all
      ```
 
-       ​
+       
 
        D.	进入build/bin/mian路径下并运行第一个例子
 
@@ -292,7 +292,7 @@
 
        运行成功的结果如下：
 
-        ![successful](picture/successful.png)
+        ![successful](successful.png)
 
        ​
 
