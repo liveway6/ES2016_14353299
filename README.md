@@ -26,7 +26,7 @@
 
      B 指令后的执行结果及验证结果如下：
 
-     ![ant](ES/LAB/LAB2/ant.png)			
+     ![ant](picture/ant.png)			
 
      ​
 
@@ -38,7 +38,7 @@
 
      C 指令后的执行结果如下：
 
-     ![unzip](ES/LAB/LAB2/unzip.png)
+     ![unzip](picture/unzip.png)
 
      ​
 
@@ -75,7 +75,7 @@
 
       在文末添加如下语句
 
-     ![bashrc](ES/LAB/LAB2/bashrc.png)	
+     ![bashrc](picture/bashrc.png)	
 
      ​
 
@@ -98,7 +98,7 @@
 
       指令后的执行结果如下：
 
-     ![javac](ES/LAB/LAB2/javac.png)
+     ![javac](picture/javac.png)
 
      ​
 
@@ -110,7 +110,7 @@
 
       指令后的执行结果如下：
 
-     ![config_java](ES/LAB/LAB2/config_java.png)
+     ![config_java](picture/config_java.png)
 
      ​
 
@@ -122,11 +122,10 @@
 
      指令后的执行结果如下：
 
-     ![java_version](ES/LAB/LAB2/java_version.png)	
+     ![java_version](picture/java_version.png)	
 
-      
 
-  2. 下载文件
+2.   下载文件
 
      A.	下载systemc-2.3.1.tgz
 
@@ -136,7 +135,7 @@
 
      systemc-2.3.1.tgz下载结果如下：
 
-     ![systemc_tgz](ES/LAB/LAB2/systemc_tgz.png)
+     ![systemc_tgz](picture/systemc_tgz.png)
 
      ​
 
@@ -148,154 +147,154 @@
 
      dol_ethz.zip下载结果如下：
 
-     ![dol_ethz_tgz](ES/LAB/LAB2/dol_ethz_tgz.png)
+     ![dol_ethz_tgz](picture/dol_ethz_tgz.png)
 
      ​
 
-  3. 解压文件
+3.   解压文件
 
-     A.	新建dol的文件夹 
-
-     ```bash
-     $  mkdir dol 
-     ```
-
-     ​
-
-     B.	将dol_ethz.zip解压到dol文件夹中
+       A.	新建dol的文件夹 
 
      ```bash
-     $  unzip dol_ethz.zip -d dol  
+       $  mkdir dol 
      ```
 
-     ​
+       ​
 
-     C.	解压systemc
+       B.	将dol_ethz.zip解压到dol文件夹中
 
      ```bash
-     $  tar -zxvf systemc-2.3.1.tgz
+       $  unzip dol_ethz.zip -d dol  
      ```
 
-     ​
+       ​
 
-     ​
-
-  4. 编译systemc
-
-     A.	解压后进入systemc-2.3.1的目录下
+       C.	解压systemc
 
      ```bash
-     $  cd systemc-2.3.1
+       $  tar -zxvf systemc-2.3.1.tgz
      ```
 
-     ​
+       ​
 
-     B.	新建一个临时文件夹objdir
+       ​
+
+4.   编译systemc
+
+       A.	解压后进入systemc-2.3.1的目录下
 
      ```bash
-     $  mkdir objdir
+       $  cd systemc-2.3.1
      ```
 
-     ​
+       ​
 
-     C.	进入该文件夹objdir
+       B.	新建一个临时文件夹objdir
 
      ```bash
-     $  cd objdir 
+       $  mkdir objdir
      ```
 
-     ​
+       ​
 
-     D.	运行configure(能根据系统的环境设置一下参数，用于编译)
+       C.	进入该文件夹objdir
 
      ```bash
-     $  ../configure CXX=g++ --disable-async-updates  
+       $  cd objdir 
      ```
 
-     编译结果如下：
+       ​
 
-     ![sync_updates](ES/LAB/LAB2/sync_updates.png)
-
-     ​	
-
-     E.	编译并查看systems-2.3.1的文件目录
+       D.	运行configure(能根据系统的环境设置一下参数，用于编译)
 
      ```bash
-     $  sudo make install  
-     $  ls
+       $  ../configure CXX=g++ --disable-async-updates  
      ```
 
-     systems-2.3.1的文件目录如下：
+       编译结果如下：
 
-     ![ls_lib](ES/LAB/LAB2/ls_lib.png)
+       ![sync_updates](picture/sync_updates.png)
 
-     ​	
+       ​	
 
-     F.	输出当前工作路径
+       E.	编译并查看systems-2.3.1的文件目录
 
      ```bash
-     $  pwd	
+       $  sudo make install  
+       $  ls
      ```
 
-     当前工作路径如下：
+       systems-2.3.1的文件目录如下：
 
-     ![pwd](ES/LAB/LAB2/pwd.png)
+       ![ls_lib](picture/ls_lib.png)
 
-     ​	
+       ​	
 
-  5. 编译dol
+       F.	输出当前工作路径
 
-     A.	进入刚刚dol的文件夹
+     ```bash
+       $  pwd	
+     ```
+
+       当前工作路径如下：
+
+       ![pwd](picture/pwd.png)
+
+       ​	
+
+5.   编译dol
+
+       A.	进入刚刚dol的文件夹
 
      ```BASH
-     $  cd ../dol  
+       $  cd ../dol  
      ```
 
-     ​
+       ​
 
-     B.	修改build_zip.xml文件
+       B.	修改build_zip.xml文件
 
      ```bash
-     $  sudo gedit build_zip.xml 
+       $  sudo gedit build_zip.xml 
      ```
 
-     ​
+       ​
 
-     找到下面这段话
+       找到下面这段话
 
-     ![YYYY](ES/LAB/LAB2/YYYY.png)
+       ![YYYY](picture/YYYY.png)
 
-     ​
+       ​
 
-     将路径更改为刚才的工作路径如下：
+       将路径更改为刚才的工作路径如下：
 
      ```java
-     <property name="systemc.inc"value="/home/liveway/systemc-2.3.1/include"/>
-     <property name="systemc.lib"value="/home/liveway/systemc-2.3.1/lib-linux/libsystemc.a"/>
+       <property name="systemc.inc"value="/home/liveway/systemc-2.3.1/include"/>
+       <property name="systemc.lib"value="/home/liveway/systemc-2.3.1/lib-linux/libsystemc.a"/>
      ```
 
-     ​
+       ​
 
-     C.	编译
+       C.	编译
 
      ```BASH
-     $  ant -f build_zip.xml all
+       $  ant -f build_zip.xml all
      ```
 
-     ​
+       ​
 
-     D.	进入build/bin/mian路径下并运行第一个例子
+       D.	进入build/bin/mian路径下并运行第一个例子
 
      ```bash
-     $  cd build/bin/main  
-     $  ant -f runexample.xml -Dnumber=1  
+       $  cd build/bin/main  
+       $  ant -f runexample.xml -Dnumber=1  
      ```
 
-     运行成功的结果如下：
+       运行成功的结果如下：
 
-      ![successful](ES/LAB/LAB2/successful.png)
+        ![successful](picture/successful.png)
 
-     ​
+       ​
 
 * **Experimental experience**
 
