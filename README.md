@@ -294,12 +294,6 @@
 
      ![successful](successful.png)
 
-     运行成功的结果如下：
-
-        ![successful](successful.png)
-
-       
-
      结束DOL开发环境的配置
 
      ​
