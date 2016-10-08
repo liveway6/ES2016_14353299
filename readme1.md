@@ -1,14 +1,14 @@
-## 配置DOL的过程
+## 配置DOL的过程	
 
-- ### **Description**
+* **Description**
 
   **Distributed operation layer (DOL)** is a software development framework to program parallel applications. The DOL allows to specify applications based on the Kahn process network model of computation and features a simulation engine based on SystemC. Moreover, the DOL provides an XML-based specification format to describe the implementation of a parallel application on a multi-processor systems, including binding and mapping.
 
   ​
 
-- ### **How to install**
+* **How to install**
 
-  1. #### 安装必要环境：
+  1. 安装必要环境：
 
      A.  安装之前更新源信息
 
@@ -38,7 +38,7 @@
 
      C 指令后的执行结果如下：
 
-     ![unzip](ES/LAB/LAB2/unzip.png)
+     ![unzip](picture/unzip.png)
 
      ​
 
@@ -93,6 +93,7 @@
      $  sudo update-alternatives --install /usr/bin/java java /usr/lib/java/jdk8/bin/java 300
 
      $  sudo update-alternatives --install /usr/bin/javac javac /usr/lib/java/jdk8/bin/javac 300
+
      ```
 
       指令后的执行结果如下：
@@ -122,10 +123,12 @@
      指令后的执行结果如下：
 
      ![java_version](picture/java_version.png)	
+     
 
      ​
 
-  2. #### 下载文件
+
+2.   下载文件
 
      A.	下载systemc-2.3.1.tgz
 
@@ -145,146 +148,158 @@
      $  sudo wget http://www.tik.ee.ethz.ch/~shapes/downloads/dol_ethz.zip
      ```
 
-     dol_ethz.zip下载结果如下：		![dol_ethz_tgz](picture/dol_ethz_tgz.png)
+     dol_ethz.zip下载结果如下：
+
+     ![dol_ethz_tgz](picture/dol_ethz_tgz.png)
 
      ​
 
-  3. #### 解压文件
+3.   解压文件
 
-      A.	新建dol的文件夹 
-
-     ```bash
-     $  mkdir dol
-     ```
-
-     ​
-
-     B.	将dol_ethz.zip解压到dol文件夹中
+       A.	新建dol的文件夹 
 
      ```bash
-     $  unzip dol_ethz.zip -d dol 
+       $  mkdir dol 
      ```
 
-       
+       ​
+
+       B.	将dol_ethz.zip解压到dol文件夹中
+
+     ```bash
+       $  unzip dol_ethz.zip -d dol  
+     ```
+
+       ​
 
        C.	解压systemc
 
      ```bash
-     $  tar -zxvf systemc-2.3.1.tgz
+       $  tar -zxvf systemc-2.3.1.tgz
      ```
 
-     ​
+       ​
 
-  4. #### 编译systemc
+       ​
 
-     A.	解压后进入systemc-2.3.1的目录下
+4.   编译systemc
+
+       A.	解压后进入systemc-2.3.1的目录下
 
      ```bash
-      $  cd systemc-2.3.1
+       $  cd systemc-2.3.1
      ```
 
-     ​
+       ​
 
-      B.	新建一个临时文件夹objdir
+       B.	新建一个临时文件夹objdir
 
      ```bash
        $  mkdir objdir
      ```
 
-     ​
+       ​
 
-      C.	进入该文件夹objdir
-
-     ```bash
-      $  cd objdir 
-     ```
-
-     ​
-
-      D.	运行configure(能根据系统的环境设置一下参数，用于编译)
+       C.	进入该文件夹objdir
 
      ```bash
-      $  ../configure CXX=g++ --disable-async-updates  
+       $  cd objdir 
      ```
 
-      编译结果如下：
+       ​
 
-     ![sync_updates](picture/sync_updates.png)
-
-     ​
-
-     E.	编译并查看systems-2.3.1的文件目录
+       D.	运行configure(能根据系统的环境设置一下参数，用于编译)
 
      ```bash
-     $  sudo make install  
-     $  ls
+       $  ../configure CXX=g++ --disable-async-updates  
      ```
 
-     systems-2.3.1的文件目录如下：
+       编译结果如下：
 
-     ![ls_lib](picture/ls_lib.png)
+       ![sync_updates](picture/sync_updates.png)
 
-     ​
+       ​	
 
-     F.	输出当前工作路径
+       E.	编译并查看systems-2.3.1的文件目录
 
      ```bash
-     $  pwd
+       $  sudo make install  
+       $  ls
      ```
 
-     当前工作路径如下：  ![pwd](picture/pwd.png)
+       systems-2.3.1的文件目录如下：
 
-     ​
+       ![ls_lib](picture/ls_lib.png)
 
-  5. #### 编译dol
+       ​	
 
-      A.	进入刚刚dol的文件夹
+       F.	输出当前工作路径
 
      ```bash
-     $  cd ../dol  
+       $  pwd	
      ```
 
-     ​
+       当前工作路径如下：
 
-     B.	修改build_zip.xml文件
+       ![pwd](picture/pwd.png)
+
+       ​	
+
+5.   编译dol
+
+       A.	进入刚刚dol的文件夹
+
+     ```BASH
+       $  cd ../dol  
+     ```
+
+       ​
+
+       B.	修改build_zip.xml文件
 
      ```bash
-      $  sudo gedit build_zip.xml 
+       $  sudo gedit build_zip.xml 
      ```
 
-      找到下面这段话  ![YYYY](picture/YYYY.png)将路径更改为刚才的工作路径如下：
+       ​
+
+       找到下面这段话
+
+       ![YYYY](picture/YYYY.png)
+
+       ​
+
+       将路径更改为刚才的工作路径如下：
 
      ```java
-      <property name="systemc.inc"value="/home/liveway/systemc-2.3.1/include"/>
+       <property name="systemc.inc"value="/home/liveway/systemc-2.3.1/include"/>
        <property name="systemc.lib"value="/home/liveway/systemc-2.3.1/lib-linux/libsystemc.a"/>
      ```
 
-     ​
+       ​
 
-      C.	编译
+       C.	编译
 
-     ```bash
-      $  ant -f build_zip.xml all
+     ```BASH
+       $  ant -f build_zip.xml all
      ```
 
-     ​
+       ​
 
-      D.	进入build/bin/mian路径下并运行第一个例子
+       D.	进入build/bin/mian路径下并运行第一个例子
 
      ```bash
-      $  cd build/bin/main  
-      $  ant -f runexample.xml -Dnumber=1  
+       $  cd build/bin/main  
+       $  ant -f runexample.xml -Dnumber=1  
      ```
 
-     运行成功的结果如下：
+      运行成功的结果如下：
 
      ![successful](picture/successful.png)
 
-     DOL环境配置完成
+       DOL环境配置完成
 
-  
-
-- ### **Experimental experience**
+* **Experimental experience**
 
   ​	还记得上个学期操作系统重装了四次VMware和Ubuntu过程的煎熬，这个学期换了电脑，听到TA大大说这学期还需要用Ubuntu，我内心是拒绝的。
 
@@ -295,3 +310,4 @@
   ​
 
   ​
+
