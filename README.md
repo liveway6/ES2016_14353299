@@ -237,49 +237,49 @@
 
 5.   #### 编译dol
 
-        A.	进入刚刚dol的文件夹
+          A.	进入刚刚dol的文件夹
 
      ```bash
-       $  cd ../dol  
+         $  cd ../dol  
      ```
 
-       ​
+         ​
 
-       B.	修改build_zip.xml文件
+         B.	修改build_zip.xml文件
 
      ```bash
-        $  sudo gedit build_zip.xml 
+          $  sudo gedit build_zip.xml 
      ```
 
-        找到下面这段话  ![YYYY](picture/YYYY.png)将路径更改为刚才的工作路径如下：
+          找到下面这段话  ![YYYY](picture/YYYY.png)将路径更改为刚才的工作路径如下：
 
      ```java
-        <property name="systemc.inc"value="/home/liveway/systemc-2.3.1/include"/>
-         <property name="systemc.lib"value="/home/liveway/systemc-2.3.1/lib-linux/libsystemc.a"/>
+          <property name="systemc.inc"value="/home/liveway/systemc-2.3.1/include"/>
+           <property name="systemc.lib"value="/home/liveway/systemc-2.3.1/lib-linux/libsystemc.a"/>
      ```
 
-       ​
+         ​
 
-        C.	编译
+          C.	编译
 
      ```bash
-        $  ant -f build_zip.xml all
+          $  ant -f build_zip.xml all
      ```
 
-       ​
+         ​
 
-        D.	进入build/bin/mian路径下并运行第一个例子
+          D.	进入build/bin/mian路径下并运行第一个例子
 
      ```bash
-        $  cd build/bin/main  
-        $  ant -f runexample.xml -Dnumber=1  
+          $  cd build/bin/main  
+          $  ant -f runexample.xml -Dnumber=1  
      ```
 
-       运行成功的结果如下：
+         运行成功的结果如下：
 
-       ![successful](picture/successful.png)
+         ![successful](picture/successful.png)
 
-       DOL环境配置完成
+         DOL环境配置完成
 
 
 
